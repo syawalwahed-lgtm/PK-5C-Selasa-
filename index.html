@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ms">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#5b4bdb">
+<title>Lumba Kereta PK Tahun 5 — Penyakit</title>
+<style>
+:root{--ink:#202044;--purple:#6554e8;--pink:#ff5c9d;--yellow:#ffd84d;--mint:#5ce1c0;--sky:#78d8ff;--paper:#fffdf7}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:linear-gradient(135deg,#d8f5ff,#ffe2f0 48%,#fff4bd);min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.35;background-image:radial-gradient(circle at 15% 20%,white 0 3px,transparent 4px),radial-gradient(circle at 80% 35%,white 0 4px,transparent 5px),radial-gradient(circle at 65% 80%,white 0 3px,transparent 4px);background-size:120px 130px,170px 160px,140px 120px;animation:floatbg 16s linear infinite;z-index:-1}
+@keyframes floatbg{to{background-position:120px -130px,-170px 160px,140px -120px}}@keyframes bob{50%{transform:translateY(-7px) rotate(-1deg)}}@keyframes shimmer{50%{filter:hue-rotate(18deg) brightness(1.08)}}@keyframes drive{to{background-position:-600px 0}}@keyframes confetti{0%{transform:translateY(-20px) rotate(0)}100%{transform:translateY(500px) rotate(500deg)}}
+header{padding:18px 16px 28px;text-align:center;background:linear-gradient(130deg,#6856ec,#a24fe2 60%,#f05b9e);color:white;border-radius:0 0 32px 32px;box-shadow:0 10px 30px #5d4bd544}
+.brand{display:inline-block;padding:6px 12px;background:#ffffff26;border:1px solid #ffffff55;border-radius:999px;font-weight:800;font-size:.8rem;letter-spacing:.06em}
+h1{font-size:clamp(2rem,7vw,4.3rem);line-height:1.03;margin:14px 0 8px;text-shadow:0 4px 0 #3b319255}header p{margin:6px auto;max-width:720px}.teacher{font-size:.92rem;opacity:.95}
+nav{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:18px}button,.tab{border:0;cursor:pointer;font:inherit;font-weight:800;border-radius:14px;padding:11px 15px;transition:transform .15s,filter .15s}button:hover,.tab:hover{transform:translateY(-2px);filter:brightness(1.04)}button:focus-visible,.tab:focus-visible{outline:3px solid #202044;outline-offset:3px}
+nav button{background:white;color:#5041bd}.sound{background:#ffe56d;color:#473500}.wrap{max-width:1080px;margin:22px auto;padding:0 14px 48px}.panel{background:#ffffffdf;backdrop-filter:blur(8px);border:2px solid #fff;border-radius:24px;padding:clamp(16px,3vw,28px);box-shadow:0 12px 28px #3e337b13;margin:16px 0}.panel h2{margin:0 0 14px;font-size:clamp(1.35rem,4vw,2rem)}.eyebrow{font-size:.78rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;color:#6755d9}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:13px}.tile{padding:17px;border-radius:18px;background:#f3f0ff;border:2px solid #e1dcff}.tile:nth-child(2){background:#fff0f6;border-color:#ffd6e6}.tile:nth-child(3){background:#eafff8;border-color:#c6f6e8}.tile:nth-child(4){background:#fff8d9;border-color:#ffec9c}.emoji{font-size:2.2rem}.tile h3{margin:4px 0}.pill{display:inline-block;background:#e9e5ff;color:#5140c0;padding:5px 10px;border-radius:99px;font-size:.8rem;font-weight:800}
+.info{border-left:5px solid var(--purple);background:#f3f0ff;padding:13px 15px;border-radius:10px;margin:10px 0}.warn{border-left-color:#f5a623;background:#fff7de}.video{display:block;overflow:hidden;border-radius:16px;text-decoration:none;color:var(--ink);background:#fff0f5;border:2px solid #ffd5e4;padding:16px}.video strong{display:block;margin-bottom:5px}.video:hover{background:#ffe4ef}.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}.tabs button{background:#e9e5ff;color:#5140c0}.tabs button.active{background:var(--purple);color:white}
+.hidden{display:none!important}.race-top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}.stats{display:flex;gap:8px;flex-wrap:wrap}.stat{background:#fff5bd;border-radius:12px;padding:8px 12px;font-weight:900}.track{height:150px;border-radius:18px;overflow:hidden;position:relative;background:linear-gradient(#a4eaff 0 48%,#82df8e 48% 66%,#55576d 66%);border:3px solid white;margin:12px 0}.cloud{position:absolute;top:12px;left:8%;font-size:2rem;animation:floatbg 14s linear infinite}.road{position:absolute;bottom:0;height:52px;width:100%;background:repeating-linear-gradient(90deg,#424455 0 55px,#fff 55px 85px,#424455 85px 140px);background-size:140px 100%;animation:drive 1.3s linear infinite}.car{position:absolute;bottom:26px;left:var(--carpos,10%);font-size:2.5rem;transition:left .5s cubic-bezier(.2,.8,.2,1);filter:drop-shadow(0 3px 1px #2225);z-index:2}.finish{position:absolute;right:12px;bottom:0;font-size:2.7rem;z-index:3}.progress{height:12px;background:#e5e2f4;border-radius:99px;overflow:hidden;margin:12px 0}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#50d6b0,#ffe04f,#ff67a8);transition:width .35s}.question{font-size:1.15rem;font-weight:850;line-height:1.45}.answers{display:grid;gap:9px;margin:15px 0}.answer{background:white;border:2px solid #e1def2;text-align:left;color:var(--ink);padding:13px 15px;border-radius:14px}.answer:disabled{cursor:default;opacity:.86}.answer.correct{background:#d9fff0;border-color:#25bd8b}.answer.wrong{background:#ffe1e8;border-color:#ef5b7d}.feedback{min-height:28px;font-weight:900;margin:8px 0}.next{background:var(--purple);color:white}.primary{background:linear-gradient(120deg,#6755e8,#a04ce2);color:white}.yellow{background:var(--yellow);color:#493900}.bigscore{text-align:center;padding:22px;border-radius:20px;background:linear-gradient(130deg,#fff1a8,#ffcde2,#d9d4ff);animation:shimmer 5s infinite}.bigscore .trophy{font-size:4rem;animation:bob 1.6s infinite}.footer{text-align:center;font-size:.85rem;opacity:.8;padding:18px}.small{font-size:.9rem}.checklist li{margin:8px 0}.stars{font-size:1.5rem;letter-spacing:3px;color:#e8a900}
+@media(max-width:560px){header{border-radius:0 0 24px 24px}.panel{border-radius:19px}.track{height:135px}.car{font-size:2rem}.road{height:47px}button{padding:10px 12px}.race-top{align-items:flex-start}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+ <div class="brand">🎓 PENDIDIKAN KESIHATAN • TAHUN 5</div>
+ <h1>🏁 LUMBA KERETA</h1>
+ <p>Belajar tentang penyakit, kumpul bintang dan pandu kereta anda ke garisan penamat!</p>
+ <p class="teacher">👨🏻‍🏫 Guru: <b>MUHAMAD SYAWALWAHED</b> · SK (P) JALAN YAHYA AWAL</p>
+ <nav><button onclick="showSection('learn')">📚 Belajar</button><button onclick="showSection('race')">🏎️ Mula Berlumba</button><button onclick="showSection('guide')">ℹ️ Panduan</button><button class="sound" id="soundBtn" onclick="toggleSound()">🔊 Bunyi: ON</button></nav>
+</header>
+<main class="wrap">
+<section class="panel" id="learn">
+ <div class="eyebrow">Misi 1 · Kenali penyakit</div>
+ <h2>🧠 Jom belajar sebelum berlumba!</h2>
+ <p>Hari ini kita belajar tentang empat penyakit berjangkit: <b>demam campak, rubella, cacar air dan beguk</b>.</p>
+ <div class="info"><b>Standard Kandungan (SK) 6.1:</b> Kemahiran mencegah dan mengurangkan faktor risiko penyakit dalam kehidupan harian.</div>
+ <div class="info"><b>Standard Pembelajaran (SP) 6.1.1:</b> Mengetahui simptom demam campak, rubella, cacar air dan beguk.<br><b>SP 6.1.2:</b> Berkomunikasi mengenai cara mencegah demam campak, rubella, cacar air dan beguk daripada merebak.</div>
+ <p class="small">Rujukan: DSKP KSSR Semakan 2017 Pendidikan Jasmani dan Pendidikan Kesihatan Tahun 5, bahagian 6.0 Penyakit. Semak dokumen kurikulum sekolah untuk pengesahan versi yang sedang digunakan.</p>
+ <h2>🎯 Objektif pembelajaran</h2>
+ <ul><li>Menyatakan simptom asas empat penyakit yang dipelajari.</li><li>Menerangkan cara penyakit boleh merebak dan memilih langkah pencegahan yang sesuai.</li><li>Berkomunikasi tentang amalan yang membantu mengurangkan penularan.</li></ul>
+ <h2>🗺️ Infografik mini: 4 penyakit</h2>
+ <div class="grid">
+  <article class="tile"><div class="emoji">🌡️</div><h3>Demam campak</h3><p>Gejala boleh termasuk demam, batuk, selesema, sakit tekak, mata berair dan ruam.</p><span class="pill">Pencegahan: vaksin</span></article>
+  <article class="tile"><div class="emoji">🔴</div><h3>Rubella</h3><p>Gejala boleh termasuk demam ringan, sakit tekak dan ruam. Jangkitan ketika hamil boleh membahayakan bayi dalam kandungan.</p><span class="pill">Pencegahan: vaksin</span></article>
+  <article class="tile"><div class="emoji">💧</div><h3>Cacar air</h3><p>Gejala boleh termasuk demam, letih dan lepuh/ruam yang gatal.</p><span class="pill">Pencegahan: vaksin</span></article>
+  <article class="tile"><div class="emoji">😮</div><h3>Beguk</h3><p>Gejala boleh termasuk demam, sakit kepala dan bengkak berhampiran rahang/pipi; mengunyah mungkin sakit.</p><span class="pill">Kurangkan kontak rapat</span></article>
+ </div>
+ <div class="info warn"><b>Ingat!</b> Gejala boleh berbeza antara individu dan penyakit lain boleh mempunyai gejala serupa. Jangan membuat diagnosis sendiri. Beritahu ibu bapa/penjaga dan dapatkan nasihat petugas kesihatan jika tidak sihat.</div>
+ <h2>🛡️ Pit stop pencegahan</h2>
+ <div class="grid">
+  <div class="tile"><div class="emoji">🧼</div><h3>Basuh tangan</h3><p>Gunakan sabun dan air, terutama selepas batuk/bersin dan sebelum makan.</p></div>
+  <div class="tile"><div class="emoji">🤧</div><h3>Etika batuk</h3><p>Tutup mulut dan hidung dengan tisu atau siku; buang tisu dan bersihkan tangan.</p></div>
+  <div class="tile"><div class="emoji">🏠</div><h3>Kurangkan penularan</h3><p>Jika sakit, beritahu penjaga, berehat di rumah dan ikut nasihat klinik/sekolah.</p></div>
+  <div class="tile"><div class="emoji">💉</div><h3>Imunisasi</h3><p>Vaksin membantu mencegah sesetengah penyakit. Semak jadual imunisasi dengan penjaga dan petugas kesihatan.</p></div>
+ </div>
+ <h2>▶️ Video pembelajaran</h2>
+ <a class="video" href="https://www.youtube.com/watch?v=s2eOEfglfF0" target="_blank" rel="noopener"><strong>🎬 Pendidikan Kesihatan Tahun 5: Penyakit</strong>Demam Campak, Cacar Air, Rubela dan Beguk — buka video di YouTube ↗</a>
+ <p class="small">Video dipautkan ke YouTube; ketersediaan dan kandungan tertakluk pada pemilik video.</p>
+ <div style="text-align:center;margin-top:20px"><button class="primary" onclick="showSection('race')">🏎️ Saya sudah bersedia — mula berlumba!</button></div>
+</section>
+
+<section class="panel hidden" id="race">
+ <div class="eyebrow">Misi 2 · Kuiz lumba kereta</div>
+ <div class="race-top"><h2>🏎️ Litar Ilmu</h2><div class="stats"><span class="stat">⭐ <span id="score">0</span>/25</span><span class="stat">🏁 Soalan <span id="qnum">1</span>/25</span></div></div>
+ <div class="track" aria-label="Litar perlumbaan kartun"><div class="cloud">☁️</div><div class="road"></div><div class="car" id="car">🏎️</div><div class="finish">🏁</div></div>
+ <div class="progress"><span id="progress"></span></div>
+ <div id="quiz">
+  <p class="question" id="question">Soalan akan dipaparkan di sini.</p>
+  <div class="answers" id="answers"></div>
+  <div class="feedback" id="feedback" aria-live="polite"></div>
+  <button class="next hidden" id="nextBtn" onclick="nextQuestion()">Soalan seterusnya ➜</button>
+ </div>
+ <div id="result" class="hidden"></div>
+ <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:16px"><button class="yellow" onclick="showSection('learn')">📚 Ulang kaji nota</button><button onclick="restartQuiz()">🔄 Mula semula</button></div>
+</section>
+
+<section class="panel hidden" id="guide">
+ <div class="eyebrow">Panduan guru</div><h2>👨🏻‍🏫 Cara menggunakan modul</h2>
+ <ol class="checklist"><li>Mulakan dengan nota infografik dan tonton video berkaitan.</li><li>Tekan <b>Mula Berlumba</b>. Murid pilih satu jawapan bagi setiap soalan.</li><li>Jawapan betul memberikan satu bintang dan menggerakkan kereta ke hadapan. Jawapan salah memberi maklum balas; murid boleh meneruskan selepas mencuba.</li><li>Gunakan paparan keputusan sebagai perbincangan formatif, bukan diagnosis atau penilaian kesihatan.</li><li>Butang Bunyi menghidupkan/mematikan kesan audio dan suara sintesis Bahasa Melayu jika tersedia pada peranti.</li></ol>
+ <div class="info"><b>Nota teknikal:</b> Suara menggunakan ciri pertuturan terbina dalam pelayar (Web Speech API). Suara Bahasa Melayu bergantung pada sistem operasi/pelayar dan sambungan peranti. Bunyi mungkin memerlukan sentuhan pertama pengguna untuk diaktifkan.</div>
+ <h2>📦 Terbitkan menggunakan GitHub Pages</h2>
+ <ol class="checklist"><li>Log masuk ke <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a> dan cipta repositori baharu, contohnya <code>lumba-kereta-pk-tahun5</code>.</li><li>Muat naik fail <code>index.html</code> ini ke bahagian utama (root) repositori.</li><li>Buka <b>Settings → Pages</b>.</li><li>Di bawah <b>Build and deployment</b>, pilih <b>Deploy from a branch</b>, pilih branch <code>main</code> dan folder <code>/(root)</code>, kemudian tekan Save.</li><li>Tunggu proses penerbitan selesai. URL biasanya berbentuk <code>https://NAMA-PENGGUNA.github.io/lumba-kereta-pk-tahun5/</code>.</li></ol>
+ <p class="small">URL akhir bergantung pada nama akaun dan repositori GitHub. Modul ini belum diterbitkan secara automatik ke akaun GitHub.</p>
+ <a class="video" href="https://docs.github.com/en/pages/quickstart" target="_blank" rel="noopener"><strong>📘 Panduan rasmi GitHub Pages</strong>Baca Quickstart GitHub Pages ↗</a>
+</section>
+<div class="footer">Dibina untuk pembelajaran Pendidikan Kesihatan Tahun 5 · Gunakan maklumat kesihatan secara bertanggungjawab.</div>
+</main>
+<script>
+const questions = [
+{q:"Antara berikut, yang manakah penyakit yang dipelajari dalam tajuk ini?",a:["Demam campak","Rabun jauh","Kaki terseliuh","Gigi berlubang"],c:0,e:"Demam campak ialah salah satu daripada empat penyakit dalam tajuk ini."},
+{q:"Gejala demam campak boleh termasuk…",a:["Batuk, selesema dan ruam","Rambut gugur sahaja","Kuku panjang","Sakit buku lali sahaja"],c:0,e:"Demam campak boleh menyebabkan demam, batuk, selesema dan ruam."},
+{q:"Antara gejala cacar air ialah…",a:["Lepuh atau ruam yang gatal","Penglihatan bertambah tajam","Rambut kerinting","Kuku bertukar panjang"],c:0,e:"Cacar air boleh menyebabkan ruam atau lepuh yang gatal serta demam."},
+{q:"Beguk boleh menyebabkan bengkak di kawasan…",a:["Pipi atau rahang","Tapak kaki sahaja","Siku sahaja","Kuku"],c:0,e:"Beguk boleh menyebabkan bengkak pada kelenjar berhampiran pipi dan rahang."},
+{q:"Rubella juga boleh menunjukkan gejala seperti…",a:["Ruam dan demam ringan","Kaki semakin panjang","Sakit gigi sahaja","Rambut berubah warna"],c:0,e:"Rubella boleh menyebabkan ruam dan demam ringan; gejala berbeza antara individu."},
+{q:"Apakah amalan yang membantu mengurangkan penyebaran kuman?",a:["Mencuci tangan dengan sabun","Berkongsi tisu terpakai","Batuk ke arah rakan","Tidak mencuci tangan"],c:0,e:"Basuh tangan dengan sabun dan air pada waktu yang sesuai."},
+{q:"Apabila batuk atau bersin, kita patut…",a:["Menutup mulut dan hidung dengan tisu atau siku","Menghadap rakan","Berkongsi sapu tangan kotor","Menahan nafas sepanjang hari"],c:0,e:"Amalkan etika batuk dan bersin, kemudian bersihkan tangan."},
+{q:"Vaksin membantu…",a:["Melindungi daripada penyakit tertentu","Menggantikan semua makanan","Menyembuhkan semua penyakit serta-merta","Mengelakkan keperluan tidur"],c:0,e:"Vaksin membantu sistem imun melindungi badan daripada penyakit tertentu."},
+{q:"Jika berasa tidak sihat dan mempunyai ruam, tindakan yang sesuai ialah…",a:["Beritahu penjaga dan dapatkan nasihat kesihatan","Sembunyikan daripada semua orang","Pergi bermain rapat dengan semua rakan","Ambil ubat orang lain"],c:0,e:"Beritahu orang dewasa yang dipercayai dan dapatkan nasihat petugas kesihatan."},
+{q:"Penyakit berjangkit boleh merebak melalui…",a:["Cara tertentu seperti titisan pernafasan atau sentuhan tercemar","Melihat warna biru","Membaca buku sahaja","Mendengar muzik"],c:0,e:"Cara penularan bergantung pada penyakit, termasuk titisan pernafasan atau sentuhan."},
+{q:"Mengapakah kita tidak patut berkongsi tisu terpakai?",a:["Ia boleh membawa kuman","Tisu menjadi lebih mahal","Ia mengubah warna mata","Ia menyebabkan hujan"],c:0,e:"Tisu terpakai boleh tercemar dengan rembesan yang membawa kuman."},
+{q:"Apakah tindakan sesuai jika rakan sakit?",a:["Galakkan rakan memaklumkan guru/penjaga dan menjaga kebersihan","Mengejek rakan","Meminjam botol minum rakan","Memaksa rakan bermain"],c:0,e:"Tunjukkan empati dan ikut langkah kesihatan yang sesuai."},
+{q:"Antara berikut, yang manakah bukan amalan pencegahan yang baik?",a:["Berkongsi tuala yang kotor","Mencuci tangan","Mengamalkan etika batuk","Mengikut nasihat kesihatan"],c:0,e:"Elakkan berkongsi barangan peribadi yang tercemar."},
+{q:"Mengapakah pengudaraan ruang penting?",a:["Membantu aliran udara dan boleh mengurangkan pengumpulan zarah di udara","Supaya tangan tidak perlu dicuci","Ia menggantikan vaksin","Supaya semua penyakit hilang serta-merta"],c:0,e:"Pengudaraan yang baik boleh membantu mengurangkan zarah berjangkit di ruang tertutup."},
+{q:"Apakah yang perlu dibuat selepas membuang tisu batuk ke tong sampah?",a:["Bersihkan tangan","Sentuh muka terus","Berkongsi tisu itu","Simpan tisu dalam poket rakan"],c:0,e:"Bersihkan tangan selepas membuang tisu."},
+{q:"Penyakit yang dipelajari dalam SK 6.1 ialah…",a:["Demam campak, rubella, cacar air dan beguk","Asma, rabun, patah tulang dan ekzema sahaja","Selsema biasa sahaja","Semua penyakit tanpa pengecualian"],c:0,e:"SK 6.1 merangkumi demam campak, rubella, cacar air dan beguk."},
+{q:"Apakah maksud simptom?",a:["Tanda atau gejala yang dialami apabila tidak sihat","Nama ubat sahaja","Jenis permainan","Jadual waktu kelas"],c:0,e:"Simptom ialah gejala yang dialami, contohnya demam atau sakit tekak."},
+{q:"Mengapakah kita tidak boleh mendiagnosis penyakit rakan sendiri?",a:["Gejala boleh serupa dan diagnosis perlu dibuat oleh petugas kesihatan","Semua ruam sama","Penyakit tidak mempunyai gejala","Rakan tidak perlu bantuan"],c:0,e:"Gejala boleh bertindih; dapatkan nasihat profesional kesihatan."},
+{q:"Rubella ketika kehamilan boleh…",a:["Membahayakan bayi dalam kandungan","Menjadikan semua orang kebal","Menguatkan gigi bayi secara automatik","Tiada kesan dalam semua keadaan"],c:0,e:"Rubella ketika hamil boleh membawa risiko serius kepada janin."},
+{q:"Apakah cara yang betul untuk mengetahui status imunisasi?",a:["Semak rekod bersama penjaga dan petugas kesihatan","Teka berdasarkan rupa","Tanya rakan sahaja","Abaikan semua rekod"],c:0,e:"Semak rekod imunisasi dan dapatkan nasihat klinik."},
+{q:"Jika sekolah meminta murid yang sakit berehat di rumah, kita patut…",a:["Ikut arahan kesihatan dan nasihat penjaga","Datang juga untuk berkongsi kuman","Sembunyikan gejala","Berkongsi botol air"],c:0,e:"Ikut nasihat penjaga, sekolah dan petugas kesihatan."},
+{q:"Apakah tindakan yang menunjukkan komunikasi kesihatan yang baik?",a:["Menerangkan langkah pencegahan dengan sopan dan tepat","Menyebarkan khabar angin","Mengejek orang sakit","Berkongsi maklumat yang belum disahkan"],c:0,e:"Gunakan maklumat yang boleh dipercayai dan sampaikan dengan sopan."},
+{q:"Mengapakah kita perlu mengelakkan sentuhan rapat apabila sedang sakit?",a:["Untuk membantu mengurangkan risiko penularan","Supaya tidak perlu makan","Untuk mengelakkan semua alahan","Supaya tidak perlu tidur"],c:0,e:"Mengurangkan kontak rapat ketika sakit boleh membantu mengurangkan penularan."},
+{q:"Antara berikut, yang manakah amalan kebersihan yang baik?",a:["Tidak berkongsi barang peribadi yang tercemar","Berkongsi sapu tangan basah","Tidak membasuh tangan","Batuk tanpa menutup mulut"],c:0,e:"Jaga kebersihan tangan dan elakkan berkongsi barangan tercemar."},
+{q:"Apakah matlamat utama pembelajaran tajuk penyakit?",a:["Mengenal gejala dan menerangkan cara mengurangkan penularan","Membuat diagnosis sendiri","Mengambil ubat tanpa nasihat","Mengelakkan semua aktiviti fizikal selama-lamanya"],c:0,e:"Kita belajar mengenal gejala asas dan memilih langkah pencegahan yang sesuai."}
+];
+let idx=0,score=0,answered=false,soundOn=true;
+function showSection(id){document.querySelectorAll('main section').forEach(s=>s.classList.add('hidden'));document.getElementById(id).classList.remove('hidden');window.scrollTo({top:0,behavior:'smooth'});if(id==='race'&&idx===0&&score===0)renderQuestion();}
+function toggleSound(){soundOn=!soundOn;document.getElementById('soundBtn').textContent=soundOn?'🔊 Bunyi: ON':'🔇 Bunyi: OFF';if(soundOn)speak('Bunyi diaktifkan');}
+function speak(t){if(!soundOn)return;try{if('speechSynthesis'in window){speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(t);u.lang='ms-MY';u.rate=.95;let vs=speechSynthesis.getVoices();let v=vs.find(x=>x.lang.toLowerCase().startsWith('ms'));if(v)u.voice=v;speechSynthesis.speak(u);}}catch(e){}}
+function beep(ok){if(!soundOn)return;try{let C=window.AudioContext||window.webkitAudioContext;if(!C)return;let c=new C(),o=c.createOscillator(),g=c.createGain();o.connect(g);g.connect(c.destination);o.frequency.value=ok?740:220;g.gain.value=.08;o.start();o.stop(c.currentTime+.16);o.onended=()=>c.close();}catch(e){}}
+function renderQuestion(){answered=false;document.getElementById('result').classList.add('hidden');document.getElementById('quiz').classList.remove('hidden');let q=questions[idx];document.getElementById('qnum').textContent=idx+1;document.getElementById('score').textContent=score;document.getElementById('question').textContent=(idx+1)+'. '+q.q;document.getElementById('feedback').textContent='Pilih jawapan yang paling tepat.';document.getElementById('nextBtn').classList.add('hidden');document.getElementById('progress').style.width=(idx/questions.length*100)+'%';document.getElementById('car').style.setProperty('--carpos',(idx/questions.length*76+5)+'%');let box=document.getElementById('answers');box.innerHTML='';q.a.forEach((a,i)=>{let b=document.createElement('button');b.className='answer';b.textContent=String.fromCharCode(65+i)+'. '+a;b.onclick=()=>chooseAnswer(i,b);box.appendChild(b);});}
+function chooseAnswer(n,btn){if(answered)return;answered=true;let q=questions[idx],all=[...document.querySelectorAll('.answer')];all.forEach(b=>b.disabled=true);let f=document.getElementById('feedback');if(n===q.c){score++;btn.classList.add('correct');f.textContent='✅ Betul! Syabas! ⭐ +1 bintang — '+q.e;speak('Betul! Syabas!');beep(true);document.getElementById('car').style.setProperty('--carpos',(Math.min(88,(idx+1)/questions.length*82+5))+'%');}else{btn.classList.add('wrong');all[q.c].classList.add('correct');f.textContent='❌ Belum tepat. Cuba lagi! '+q.e;speak('Belum tepat. Cuba lagi!');beep(false);}document.getElementById('score').textContent=score;document.getElementById('progress').style.width=((idx+1)/questions.length*100)+'%';document.getElementById('nextBtn').textContent=idx===questions.length-1?'🏆 Lihat keputusan':'Soalan seterusnya ➜';document.getElementById('nextBtn').classList.remove('hidden');}
+function nextQuestion(){idx++;if(idx>=questions.length){showResult();return;}renderQuestion();}
+function showResult(){document.getElementById('quiz').classList.add('hidden');let r=document.getElementById('result');r.classList.remove('hidden');let pct=Math.round(score/questions.length*100);let stars='⭐'.repeat(Math.max(1,Math.round(score/5)));r.innerHTML=`<div class="bigscore"><div class="trophy">🏆🎉🏎️</div><h2>Anda sampai ke garisan penamat!</h2><p class="stars">${stars}</p><h2>${score} / 25 markah</h2><p>${pct}% jawapan betul</p><p>${pct>=80?'Hebat! Anda juara litar ilmu!':pct>=60?'Bagus! Teruskan ulang kaji untuk lebih cemerlang.':'Terus berusaha! Baca nota dan cuba lagi.'}</p><p>Ingat: kenali gejala, amalkan kebersihan dan dapatkan nasihat orang dewasa/petugas kesihatan.</p><button class="primary" onclick="restartQuiz()">🔄 Berlumba sekali lagi</button> <button class="yellow" onclick="showSection('learn')">📚 Ulang kaji nota</button></div>`;document.getElementById('progress').style.width='100%';document.getElementById('car').style.setProperty('--carpos','88%');speak('Tahniah! Anda sampai ke garisan penamat. Markah anda '+score+' daripada 25.');confetti();}
+function confetti(){for(let i=0;i<28;i++){let d=document.createElement('div');d.textContent=['⭐','🎉','✨','🏆'][i%4];d.style.cssText=`position:fixed;top:-30px;left:${Math.random()*100}%;font-size:${18+Math.random()*20}px;z-index:999;pointer-events:none;animation:confetti ${2+Math.random()*2}s linear forwards`;document.body.appendChild(d);setTimeout(()=>d.remove(),4200);}}
+function restartQuiz(){idx=0;score=0;renderQuestion();document.getElementById('score').textContent='0';showSection('race');}
+if('speechSynthesis'in window)speechSynthesis.onvoiceschanged=()=>{};
+renderQuestion();
+</script>
+</body></html>
